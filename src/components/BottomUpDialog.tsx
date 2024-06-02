@@ -55,6 +55,8 @@ const BottomUpDialog: React.FC<BottomUpDialogProps> = ({
       if (dataId == "Care") {
         if (limit == "有外籍看護" || limit == "有特別津貼") {
           quota = LevelData ? LevelData.Quota * 0.3 : 0;
+        } else {
+          quota = LevelData ? LevelData.Quota : 0;
         }
       } else if (dataId == "ShortServices") {
         if (limit == "無" || limit == "有特別津貼") {
