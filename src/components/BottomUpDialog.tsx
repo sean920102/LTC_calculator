@@ -35,8 +35,14 @@ const BottomUpDialog: React.FC<BottomUpDialogProps> = ({
         return data.Name == level || data.Name == "Normal";
       })[0];
       ItemData = LTCData[dataId].Item.filter((data) => {
-        if (limit != "無") return data.otherService == true;
-        else return data;
+        if (dataId == "ShortServices") {
+          if (limit == "有外籍看護") return data;
+          else return;
+        }
+        if (limit != "無") {
+          return data.otherService;
+        }
+        return data;
       });
 
       if (burden == "一般戶") {
@@ -46,11 +52,14 @@ const BottomUpDialog: React.FC<BottomUpDialogProps> = ({
       } else {
         IncomeType = 1;
       }
-      if (limit == "有外籍看護" || limit == "有特別津貼") {
-        quota = LevelData ? LevelData.Quota * 0.3 : 0;
+      if (dataId == "Care") {
+        if (limit == "有外籍看護" || limit == "有特別津貼") {
+          quota = LevelData ? LevelData.Quota * 0.3 : 0;
+        }
       } else {
         quota = LevelData ? LevelData.Quota : 0;
       }
+
       break;
   }
 
