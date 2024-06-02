@@ -9,7 +9,9 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist",
+    "deploy-ignore-checks": "eslint --ignore-pattern 'src' && tsc --noEmit && npm run deploy"
+
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
@@ -40,7 +42,5 @@
     "tailwindcss": "^3.4.3",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
-  },
-  "homepage": "https://sean920102.github.io/LTC_calculator/"
-
+  }
 }
