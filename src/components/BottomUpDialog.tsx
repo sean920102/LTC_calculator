@@ -138,7 +138,7 @@ const BottomUpDialog: React.FC<BottomUpDialogProps> = ({
                         </p>
                         <input
                           type="number"
-                          className="w-[100%] border bg-gray-50 border-gray-800"
+                          className="w-[100%] border bg-gray-50 border-gray-800 text-black"
                           min="0"
                           value={quantities[item.id] || ""}
                           onChange={(e) =>
