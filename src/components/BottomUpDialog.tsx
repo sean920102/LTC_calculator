@@ -142,10 +142,10 @@ const BottomUpDialog: React.FC<BottomUpDialogProps> = ({
                     <div className="h-sm:hidden h-xs:block">
                       <div className="flex flex-wrap mt-5">
                         <div className="w-1/3 text-lg font-medium">餘額</div>
-                        <div className="w-1/3 text-lg font-medium">自付額</div>
                         <div className="w-1/3 text-lg font-medium">
                           已使用額
                         </div>
+                        <div className="w-1/3 text-lg font-medium">自付額</div>
                       </div>
                       <div className="flex flex-wrap mt-1">
                         <div className="w-1/3 text-lg font-medium">

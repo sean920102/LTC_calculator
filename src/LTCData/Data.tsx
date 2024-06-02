@@ -623,14 +623,75 @@ const LTCData: I_LTCData = {
   ShortServices: {
     Level: [
       {
-        Name: "Normal",
-        Quota: 1840,
+        Name: "2級",
+        Quota: 87780,
+      },
+      {
+        Name: "3級",
+        Quota: 87780,
+      },
+      {
+        Name: "4級",
+        Quota: 87780,
+      },
+      {
+        Name: "5級",
+        Quota: 87780,
+      },
+      {
+        Name: "6級",
+        Quota: 87780,
+      },
+      {
+        Name: "7級",
+        Quota: 71610,
+      },
+      {
+        Name: "8級",
+        Quota: 71610,
       },
     ],
-    Item: [],
+    Item: [
+      {
+        id: "SC03",
+        name: "日照喘息(全日)",
+        price: 1250,
+        otherService: true,
+      },
+      {
+        id: "SC04",
+        name: "日照喘息(半日)",
+        price: 625,
+        otherService: true,
+      },
+      {
+        id: "SC05",
+        name: "機構住宿式24小時喘息",
+        price: 2310,
+        otherService: true,
+      },
+      {
+        id: "SC06",
+        name: "小規模多機能夜間喘息",
+        price: 2000,
+        otherService: true,
+      },
+      {
+        id: "SC07",
+        name: "巷弄長照站喘息",
+        price: 170,
+        otherService: true,
+      },
+      {
+        id: "SC09",
+        name: "居家喘息(2小時)",
+        price: 770,
+        otherService: true,
+      },
+    ],
     Burden: {
-      Normal: 0.27,
-      Mid: 0.09,
+      Normal: 0.16,
+      Mid: 0.05,
     },
   },
   FoodServices: {
