@@ -152,7 +152,7 @@ const BottomUpDialog: React.FC<BottomUpDialogProps> = ({
                           ${Math.floor(totalPrice)}
                         </div>
                         <div className="w-1/2 text-lg font-medium">
-                          ${Math.floor(totalPayself)}
+                          ${Math.floor(totalPayself) + Math.floor(totalPrice)}
                         </div>
                       </div>
                     </div>
@@ -172,7 +172,7 @@ const BottomUpDialog: React.FC<BottomUpDialogProps> = ({
                           ${Math.floor(totalPrice)}
                         </div>
                         <div className="w-1/3 text-lg font-medium">
-                          ${Math.floor(totalPayself)}
+                          ${Math.floor(totalPayself) + Math.floor(totalPrice)}
                         </div>
                       </div>
                     </div>
