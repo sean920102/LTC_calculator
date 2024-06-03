@@ -85,9 +85,9 @@ const BottomUpDialog: React.FC<BottomUpDialogProps> = ({
       const product = ItemData.find((p: any) => p.id === itemId);
       if (itemId == "BA15-2") {
         return (
-          Math.floor(
-            acc + (product ? product.price * IncomeType * quantity : 0)
-          ) + Math.floor(product ? product.price : 0)
+          acc +
+          (product ? product.price * IncomeType * quantity : 0) +
+          (product ? product.price * quantity : 0)
         );
       }
       return acc + (product ? product.price * IncomeType * quantity : 0);
