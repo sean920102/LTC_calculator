@@ -83,6 +83,13 @@ const BottomUpDialog: React.FC<BottomUpDialogProps> = ({
   const totalPayself = Object.entries(quantities).reduce(
     (acc, [itemId, quantity]) => {
       const product = ItemData.find((p: any) => p.id === itemId);
+      if (itemId == "BA15-2") {
+        return (
+          Math.floor(
+            acc + (product ? product.price * IncomeType * quantity : 0)
+          ) + Math.floor(product ? product.price : 0)
+        );
+      }
       return acc + (product ? product.price * IncomeType * quantity : 0);
     },
     0
@@ -152,7 +159,7 @@ const BottomUpDialog: React.FC<BottomUpDialogProps> = ({
                           ${Math.floor(totalPrice)}
                         </div>
                         <div className="w-1/2 text-lg font-medium">
-                          ${Math.floor(totalPayself) + Math.floor(totalPrice)}
+                          ${Math.floor(totalPayself)}
                         </div>
                       </div>
                     </div>
@@ -172,7 +179,7 @@ const BottomUpDialog: React.FC<BottomUpDialogProps> = ({
                           ${Math.floor(totalPrice)}
                         </div>
                         <div className="w-1/3 text-lg font-medium">
-                          ${Math.floor(totalPayself) + Math.floor(totalPrice)}
+                          ${Math.floor(totalPayself)}
                         </div>
                       </div>
                     </div>
